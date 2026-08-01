@@ -1,0 +1,554 @@
+/* ================================
+   NAVBAR - GLASSMORPHISM DESIGN
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 60px);
+  max-width: 1200px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  z-index: 1000;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
+  transition: all 0.4s ease;
+}
+
+
+/* ================================
+   ANIMATED GLASS GLOW
+================================ */
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    120deg,
+    #00f5ff,
+    #7c3aed,
+    #ff00cc,
+    #00f5ff
+  );
+
+  background-size: 300% 300%;
+
+  opacity: 0.35;
+
+  z-index: -1;
+
+  animation: glassGlow 8s ease infinite;
+}
+
+@keyframes glassGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.logo {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.logo span {
+  color: #00f5ff;
+
+  text-shadow:
+    0 0 10px #00f5ff,
+    0 0 25px #00f5ff;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+
+  text-shadow:
+    0 0 10px rgba(0, 245, 255, 0.6),
+    0 0 25px rgba(124, 58, 237, 0.5);
+}
+
+
+/* ================================
+   NAV LINKS
+================================ */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  position: relative;
+
+  display: block;
+
+  padding: 10px 13px;
+
+  color: #e8e8e8;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Hover glass */
+
+.nav-links a:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(0, 245, 255, 0.12);
+}
+
+
+/* Animated underline */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 4px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #00f5ff,
+    #7c3aed,
+    #ff00cc
+  );
+
+  transform: translateX(-50%);
+
+  transition: width 0.35s ease;
+
+  box-shadow:
+    0 0 8px #00f5ff;
+}
+
+.nav-links a:hover::after {
+  width: 65%;
+}
+
+
+/* ================================
+   NAV ICONS
+================================ */
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* ================================
+   THEME BUTTON
+================================ */
+
+.theme-btn,
+.menu-btn {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Theme hover */
+
+.theme-btn:hover {
+  transform: rotate(20deg) scale(1.08);
+
+  background: rgba(0, 245, 255, 0.15);
+
+  color: #00f5ff;
+
+  box-shadow:
+    0 0 15px rgba(0, 245, 255, 0.35);
+}
+
+
+/* Menu hover */
+
+.menu-btn:hover {
+  transform: scale(1.08);
+
+  background: rgba(124, 58, 237, 0.2);
+
+  color: #c084fc;
+
+  box-shadow:
+    0 0 15px rgba(124, 58, 237, 0.35);
+}
+
+
+/* ================================
+   MOBILE MENU BUTTON
+================================ */
+
+.menu-btn {
+  display: none;
+}
+
+
+/* ================================
+   DARK THEME
+================================ */
+
+body.dark-theme {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(0, 245, 255, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(124, 58, 237, 0.12),
+      transparent 30%
+    ),
+    #080b14;
+
+  color: #ffffff;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+body.dark-theme .navbar {
+  background: rgba(10, 15, 30, 0.55);
+}
+
+
+/* ================================
+   LIGHT THEME
+================================ */
+
+body.light-theme {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(0, 180, 255, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(124, 58, 237, 0.08),
+      transparent 30%
+    ),
+    #f5f7fb;
+
+  color: #171717;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+body.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.55);
+
+  border-color: rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .logo {
+  color: #171717;
+}
+
+body.light-theme .nav-links a {
+  color: #333333;
+}
+
+body.light-theme .nav-links a:hover {
+  color: #6d28d9;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+body.light-theme .theme-btn,
+body.light-theme .menu-btn {
+  color: #333333;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    width: calc(100% - 30px);
+    height: 65px;
+
+    padding: 0 18px;
+
+    top: 15px;
+
+    border-radius: 17px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: 78px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 15px;
+
+    border-radius: 18px;
+
+    background: rgba(10, 15, 30, 0.75);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px) scale(0.97);
+
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0) scale(1);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 12px;
+  }
+
+  .nav-links a:hover {
+    transform: translateX(5px);
+  }
+
+  body.light-theme .nav-links {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    width: calc(100% - 20px);
+
+    top: 10px;
+
+    padding: 0 13px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .theme-btn,
+  .menu-btn {
+    width: 38px;
+    height: 38px;
+
+    font-size: 15px;
+  }
+
+  .nav-icons {
+    gap: 6px;
+  }
+}
+
+
+/* ================================
+   SMOOTH PAGE SCROLL
+================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius:30px;
+    background:linear-gradient(
+        180deg,
+        #00f5ff,
+        #7c3aed,
+        #ff00cc,
+        #00f5ff
+    );
+    background-size:300% 300%;
+    animation:scrollGlow 6s linear infinite;
+}
+
+@keyframes scrollGlow{
+
+0%{
+background-position:0% 0%;
+}
+
+50%{
+background-position:100% 100%;
+}
+
+100%{
+background-position:0% 0%;
+}
+
+}
+
+
+/* ================================
+   SELECTION
+================================ */
+
+::selection {
+  background: #7c3aed;
+  color: #ffffff;
+}

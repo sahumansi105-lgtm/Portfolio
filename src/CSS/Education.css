@@ -1,0 +1,158 @@
+.education {
+  width: 100%;
+  min-height: 100vh;
+  background: #07070f;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.education .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title span {
+  color: #4f8cff;
+  letter-spacing: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  font-size: 55px;
+  margin: 12px 0;
+}
+
+.section-title p {
+  color: #9b9b9b;
+  font-size: 17px;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  transition: 0.4s;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  border-color: #4f8cff;
+  box-shadow: 0 15px 40px rgba(79, 140, 255, 0.2);
+}
+
+.education-icon {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4f8cff, #7d5fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #fff;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-year {
+  display: inline-block;
+  background: rgba(79, 140, 255, 0.15);
+  color: #4f8cff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.education-content h3 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.education-content h4 {
+  color: #4f8cff;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.education-content p {
+  color: #cfcfcf;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.education-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.education-tags span {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.education-tags span:hover {
+  background: #4f8cff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+
+  .section-title h2 {
+    font-size: 40px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .education-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .education-content h3 {
+    font-size: 24px;
+  }
+
+  .education-content h4 {
+    font-size: 18px;
+  }
+
+  .education-tags {
+    justify-content: center;
+  }
+
+}
