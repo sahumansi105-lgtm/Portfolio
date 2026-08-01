@@ -1,5 +1,5 @@
 import eventora from "../assets/images/eventora.png";
-import hotel from "../assets/images/hotel.png";
+import hotel from "../assets/images/Hotel.png";
 import restaurant from "../assets/images/restaurant.png";
 import food from "../assets/images/food.png";
 import sports from "../assets/images/sports.png";
