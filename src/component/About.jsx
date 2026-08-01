@@ -50,7 +50,7 @@ function About() {
 
               <div>
                 <strong>Name</strong>
-                <span>Mansi Sahu</span>
+                <span>Mansi Shahu</span>
               </div>
 
               <div>

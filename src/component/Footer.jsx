@@ -14,7 +14,7 @@ function Footer() {
       <div className="footer-container">
 
         <div className="footer-logo">
-          <h2>Mansi Sahu</h2>
+          <h2>Mansi Shahu</h2>
           <p>
             Aspiring Java Full Stack Developer passionate about building
             responsive, scalable, and user-friendly web applications using
@@ -74,7 +74,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Mansi Sahu | Made with{" "}
+        © {new Date().getFullYear()} Mansi Shahu | Made with{" "}
         <FaHeart className="heart" /> using React & Spring Boot
       </div>
 
